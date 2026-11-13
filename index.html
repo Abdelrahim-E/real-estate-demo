@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Julian Vance | Local Real Estate Agent</title>
+<meta name="description" content="Independent real estate agent helping you buy, sell and understand your neighborhood. Featured listings, recent sales and free home valuations.">
+<meta property="og:title" content="Julian Vance | Local Real Estate Agent">
+<meta property="og:description" content="Buy or sell with a local expert. Featured listings, neighborhood guides and free valuations.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Julian Vance","description":"Independent real estate agent and local market expert","areaServed":["Downtown","Suburbs","City Center"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Hanken+Grotesk:wght@400;500;700&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<header class="header" id="header">
+  <div class="container bar">
+    <a href="#top" class="logo">Julian Vance</a>
+    <nav class="nav" id="nav">
+      <a href="#listings" data-i18n="nav_listings">Listings</a>
+      <a href="#mortgage" data-i18n="nav_mortgage">Calculator</a>
+      <a href="#areas" data-i18n="nav_areas">Neighborhoods</a>
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#reviews" data-i18n="nav_reviews">Reviews</a>
+      <a href="#contact" class="btn btn-sm" data-i18n="nav_contact">Get in touch</a>
+      <button class="icon-btn theme-btn" id="themeToggle" aria-label="Toggle Theme">
+        <svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+    </nav>
+    <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <h1 data-i18n="hero_title">Know your street before you buy on it.</h1>
+      <p data-i18n="hero_desc">Ten years of local sales, school runs and street-by-street knowledge, put to work for first-time buyers and sellers who want a fair price.</p>
+      <div class="actions">
+        <a href="#listings" class="btn" data-i18n="btn_view">See listings</a>
+        <a href="#contact" class="btn btn-ghost" data-i18n="btn_value">Get a free home valuation</a>
+      </div>
+    </div>
+    
+    <figure class="arch">
+      <video id="heroVideo" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=80">
+        <source src="hero.mp4" type="video/mp4">
+      </video>
+    </figure>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container stat-row">
+    <div><b data-count="10" data-suffix="+">0</b><span data-i18n="st1">years in the local market</span></div>
+    <div><b data-count="150" data-suffix="">0</b><span data-i18n="st2">homes sold</span></div>
+    <div><b data-count="50" data-prefix="$" data-suffix="M">0</b><span data-i18n="st3">in total sales</span></div>
+    <div><b data-count="98" data-suffix="%">0</b><span data-i18n="st4">of asking price achieved</span></div>
+  </div>
+</section>
+
+<section id="listings" class="sec fade-up">
+  <div class="container">
+    <h2 data-i18n="list_title">Homes for sale and recently sold</h2>
+    <div class="filters">
+      <div class="tabs" role="group">
+        <button class="chip on" data-f="all" data-i18n="f_all">All</button>
+        <button class="chip" data-f="sale" data-i18n="f_sale">For sale</button>
+        <button class="chip" data-f="sold" data-i18n="f_sold">Sold</button>
+      </div>
+      <select id="hoodFilter" aria-label="Neighborhood">
+        <option value="all" data-i18n="h_all">All neighborhoods</option>
+        <option value="down" data-i18n="h_down">Downtown</option>
+        <option value="sub" data-i18n="h_sub">Suburbs</option>
+        <option value="cen" data-i18n="h_cen">City Center</option>
+      </select>
+    </div>
+    <div class="grid" id="grid">
+      <!-- Property 1 -->
+      <article class="card open-modal" data-status="sale" data-hood="down"
+        data-img="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80" 
+        data-img1="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80" 
+        data-img2="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=600&q=80" 
+        data-price="$850,000" data-loc="123 Maple Ave, Downtown" data-feat="3 beds • 2 baths • 2,500 sq ft">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="House"><span class="tag" data-i18n="f_sale">For sale</span></div>
+        <div class="info">
+          <h3>$850,000</h3><p>123 Maple Ave, <span data-i18n="h_down">Downtown</span></p>
+          <p class="feat"><span>3 <i data-i18n="beds">beds</i></span><span>2 <i data-i18n="baths">baths</i></span><span>2,500 <i data-i18n="sqft">sq ft</i></span></p>
+          <button class="link" data-i18n="btn_tour">View Details</button>
+        </div>
+      </article>
+
+      <!-- Property 2 -->
+      <article class="card open-modal" data-status="sale" data-hood="sub"
+        data-img="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80" 
+        data-img1="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" 
+        data-img2="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80" 
+        data-price="$1,200,000" data-loc="456 Oak Lane, Suburbs" data-feat="4 beds • 3 baths • 3,200 sq ft">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="House"><span class="tag" data-i18n="f_sale">For sale</span></div>
+        <div class="info">
+          <h3>$1,200,000</h3><p>456 Oak Lane, <span data-i18n="h_sub">Suburbs</span></p>
+          <p class="feat"><span>4 <i data-i18n="beds">beds</i></span><span>3 <i data-i18n="baths">baths</i></span><span>3,200 <i data-i18n="sqft">sq ft</i></span></p>
+          <button class="link" data-i18n="btn_tour">View Details</button>
+        </div>
+      </article>
+
+      <!-- Property 3 -->
+      <article class="card open-modal" data-status="sold" data-hood="cen"
+        data-img="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&q=80" 
+        data-img1="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&q=80" 
+        data-img2="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80" 
+        data-price="$650,000" data-loc="789 Pine St, City Center" data-feat="2 beds • 2 baths • Sold in 9 days">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80" alt="House"><span class="tag sold" data-i18n="f_sold">Sold</span></div>
+        <div class="info">
+          <h3>$650,000</h3><p>789 Pine St, <span data-i18n="h_cen">City Center</span></p>
+          <p class="feat"><span>2 <i data-i18n="beds">beds</i></span><span>2 <i data-i18n="baths">baths</i></span><span data-i18n="sold_fast">Sold in 9 days</span></p>
+          <button class="link" data-i18n="btn_details">View Details</button>
+        </div>
+      </article>
+
+      <!-- Property 4 -->
+      <article class="card open-modal" data-status="sold" data-hood="sub"
+        data-img="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&q=80" 
+        data-img1="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&q=80" 
+        data-img2="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=600&q=80" 
+        data-price="$940,000" data-loc="12 Cedar Court, Suburbs" data-feat="4 beds • 3 baths • Sold over asking">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80" alt="House"><span class="tag sold" data-i18n="f_sold">Sold</span></div>
+        <div class="info">
+          <h3>$940,000</h3><p>12 Cedar Court, <span data-i18n="h_sub">Suburbs</span></p>
+          <p class="feat"><span>4 <i data-i18n="beds">beds</i></span><span>3 <i data-i18n="baths">baths</i></span><span data-i18n="sold_over">Sold over asking</span></p>
+          <button class="link" data-i18n="btn_details">View Details</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="mortgage" class="sec alt">
+  <div class="container">
+    <h2 data-i18n="calc_title">Mortgage Calculator</h2>
+    <div class="calc-box">
+      <div class="calc-inputs">
+        <label data-i18n="calc_price">Property Price ($)</label>
+        <input type="number" id="calcPrice" value="850000">
+        <label data-i18n="calc_down">Down Payment (%)</label>
+        <input type="number" id="calcDown" value="20">
+        <label data-i18n="calc_rate">Interest Rate (%)</label>
+        <input type="number" id="calcRate" value="5.5" step="0.1">
+        <label data-i18n="calc_years">Loan Term (Years)</label>
+        <input type="number" id="calcYears" value="30">
+      </div>
+      <div class="calc-result">
+        <p data-i18n="calc_monthly">Estimated Monthly Payment</p>
+        <h3 id="calcMonthly">$0</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="areas" class="sec fade-up">
+  <div class="container">
+    <h2 data-i18n="areas_title">Neighborhood guides</h2>
+    <div class="grid3">
+      <article class="area-card" onclick="this.classList.toggle('active')">
+        <div class="area-header">
+          <h3 data-i18n="h_down">Downtown</h3>
+          <span class="area-toggle">+</span>
+        </div>
+        <p data-i18n="a1">Walk to cafes, offices and the tram. Best for people who want no car.</p>
+        <div class="area-stats">
+          <dl><dt data-i18n="avg">Average price</dt><dd>$820,000</dd><dt data-i18n="schools">Schools</dt><dd>8/10</dd><dt data-i18n="transit">Transit</dt><dd data-i18n="t_high">Excellent</dd></dl>
+        </div>
+      </article>
+      
+      <article class="area-card" onclick="this.classList.toggle('active')">
+        <div class="area-header">
+          <h3 data-i18n="h_sub">Suburbs</h3>
+          <span class="area-toggle">+</span>
+        </div>
+        <p data-i18n="a2">Larger homes, quiet streets and parks. Best for growing families.</p>
+        <div class="area-stats">
+          <dl><dt data-i18n="avg">Average price</dt><dd>$1,050,000</dd><dt data-i18n="schools">Schools</dt><dd>9/10</dd><dt data-i18n="transit">Transit</dt><dd data-i18n="t_mid">Good</dd></dl>
+        </div>
+      </article>
+      
+      <article class="area-card" onclick="this.classList.toggle('active')">
+        <div class="area-header">
+          <h3 data-i18n="h_cen">City Center</h3>
+          <span class="area-toggle">+</span>
+        </div>
+        <p data-i18n="a3">Apartments close to everything. Best for first-time buyers and investors.</p>
+        <div class="area-stats">
+          <dl><dt data-i18n="avg">Average price</dt><dd>$640,000</dd><dt data-i18n="schools">Schools</dt><dd>7/10</dd><dt data-i18n="transit">Transit</dt><dd data-i18n="t_high">Excellent</dd></dl>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="sec alt fade-up">
+  <div class="container split">
+    <img class="about-img" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=800&q=80" alt="Julian Vance, real estate agent" loading="lazy">
+    <div>
+      <h2 data-i18n="about_title">I grew up here, and I sell here.</h2>
+      <p class="lead" data-i18n="about_desc">I started in real estate after helping my own family buy their first home. Since then I have helped over 150 households buy, sell and invest, and I answer my own phone.</p>
+      <ul class="creds">
+        <li data-i18n="c1">Top 1% of agents in the region</li>
+        <li data-i18n="c2">Licensed and certified buyer's agent</li>
+        <li data-i18n="c3">5-Star Client Satisfaction</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="sec">
+  <div class="container">
+    <h2 data-i18n="faq_title">Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" data-i18n="faq_q1">How long does the buying process take?</button>
+        <div class="faq-a"><p data-i18n="faq_a1">Typically 30-45 days from offer to closing.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" data-i18n="faq_q2">Do I need a pre-approval?</button>
+        <div class="faq-a"><p data-i18n="faq_a2">Yes, it strengthens your offer significantly.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" data-i18n="faq_q3">What are the closing costs?</button>
+        <div class="faq-a"><p data-i18n="faq_a3">Usually 2-5% of the purchase price, covering taxes, title fees and lender costs.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="sec alt">
+  <div class="container">
+    <h2 data-i18n="rev_title">What clients say</h2>
+    <div class="grid2">
+      <blockquote><p data-i18n="r1">"We found our home in under a month. He answered every question, even at 10 pm."</p><cite>John D. <span data-i18n="r1s">Bought a home</span></cite></blockquote>
+      <blockquote><p data-i18n="r2">"Sold above asking in two weeks. The photos and the pricing advice made the difference."</p><cite>Sarah M. <span data-i18n="r2s">Sold a home</span></cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="sec">
+  <div class="container split">
+    <div>
+      <h2 data-i18n="book_title">Tell me what you need.</h2>
+      <p class="lead" data-i18n="book_desc">Choose buying or selling. I reply within one working day.</p>
+    </div>
+    <div class="formbox">
+      <div class="tabs" role="tablist">
+        <button class="chip on" role="tab" data-tab="buy" aria-selected="true" data-i18n="tab_buy">I'm buying</button>
+        <button class="chip" role="tab" data-tab="sell" aria-selected="false" data-i18n="tab_sell">I'm selling</button>
+      </div>
+      <form id="leadForm" novalidate>
+        <label for="n" data-i18n="f_name">Full name</label><input id="n" required>
+        <label for="e" data-i18n="f_email">Email</label><input id="e" type="email" required>
+        <div data-pane="buy">
+          <label for="b" data-i18n="f_budget">Budget</label>
+          <select id="b"><option>$500k-$800k</option><option>$800k-$1.2M</option><option>$1.2M+</option></select>
+          <label for="bd" data-i18n="f_beds">Bedrooms</label>
+          <select id="bd"><option>1-2</option><option>3</option><option>4+</option></select>
+        </div>
+        <div data-pane="sell" hidden>
+          <label for="ad" data-i18n="f_addr">Property address</label><input id="ad">
+          <label for="tl" data-i18n="f_time">When do you want to sell?</label>
+          <select id="tl"><option data-i18n="tl1">Within 3 months</option><option data-i18n="tl2">3 to 6 months</option><option data-i18n="tl3">Just curious</option></select>
+        </div>
+        <button class="btn" type="submit" data-i18n="f_send">Send request</button>
+        <p class="note" id="formNote" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container foot">
+    <form id="news" novalidate>
+      <h3 data-i18n="news_title">New listings in your inbox, once a month</h3>
+      <div class="row"><input type="email" id="ne" placeholder="Email" data-i18n-ph="f_email" aria-label="Email"><button class="btn btn-pop" data-i18n="news_btn">Subscribe</button></div>
+      <p class="note" id="newsNote" role="status"></p>
+    </form>
+    <p data-i18n="rights">© 2026 Julian Vance. All rights reserved.</p>
+  </div>
+</footer>
+
+<div id="propModal" class="modal">
+  <div class="modal-content">
+    <button class="close-modal" id="closeModal">&times;</button>
+    <div class="modal-gallery">
+      <img id="modalImg" src="" alt="Main Property">
+      <div class="modal-thumbs">
+        <img id="modalThumb1" src="" alt="Interior">
+        <img id="modalThumb2" src="" alt="Room">
+      </div>
+    </div>
+    <div class="modal-info">
+      <h3 id="modalPrice"></h3>
+      <p id="modalLoc"></p>
+      <p id="modalFeat"></p>
+      <a href="#contact" class="btn" id="modalTourBtn" data-i18n="btn_schedule">Schedule a tour</a>
+    </div>
+  </div>
+</div>
+
+<a href="#contact" class="sticky-cta" data-i18n="sticky_cta">Schedule a Consultation</a>
+
+<script src="script.js"></script>
+</body>
+</html>
