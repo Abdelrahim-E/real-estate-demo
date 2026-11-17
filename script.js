@@ -184,9 +184,9 @@ function updateMortgage() {
     const n = (parseFloat(calcYears.value) || 0) * 12;
     const principal = p - (p * (downPct / 100));
     
-    if (principal <= 0 || r <= 0 || n <= 0) { calcMonthly.textContent = '$0'; return; }
+    if (principal <= 0 || r < 0 || n <= 0) { calcMonthly.textContent = '$0'; return; }
     
-    const monthly = principal * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+    const monthly = r === 0 ? principal / n : principal * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
     const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
     calcMonthly.textContent = formatter.format(monthly);
 }
@@ -202,6 +202,7 @@ $("#leadForm").addEventListener("submit", e => {
     em.classList.toggle("bad", !validEmail(em.value));
     if (!n.value.trim() || !validEmail(em.value)) { note.textContent = "Please fill in the highlighted fields."; return; }
     
+    if (!$("#ok").checked) { note.textContent = "Please tick the box to agree."; return; }
     note.textContent = "Demo Form: This data was not sent anywhere. In a real project, this connects to your CRM.";
     e.target.reset();
 });

@@ -150,7 +150,7 @@ select, input { font: inherit; color: var(--ink); background: var(--surf); borde
 .area-header { padding: 24px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none; }
 .area-header::-webkit-details-marker { display: none; }
 .area-header h3 { margin: 0; font-size: 26px; transition: color 0.3s; }
-.area-header:hover h3 { color: var(--pop-ink); }
+.area-header:hover h3 { text-decoration: underline; text-underline-offset: 6px; }
 .area-toggle { font-size: 24px; font-weight: 300; transition: transform 0.3s ease; }
 .area-card[open] .area-toggle { transform: rotate(45deg); }
 .area-content { padding: 0 24px 24px; }
@@ -210,6 +210,10 @@ dialog.modal::backdrop { background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(
 .modal-info .btn { margin-top: 20px; width: auto; }
 
 .sticky-cta { display: none !important; }
+
+.formbox .consent { display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 14px; margin-top: 18px; }
+.formbox .consent input { width: auto; margin-top: 4px; accent-color: var(--btn); }
+.consent a, .footer a { text-decoration: underline; text-underline-offset: 4px; }
 
 @media(max-width: 860px) {
     .sec { padding: 64px 0; }

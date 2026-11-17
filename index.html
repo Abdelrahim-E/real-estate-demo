@@ -8,8 +8,7 @@
     <meta property="og:title" content="Julian Vance | Real Estate Agent">
     <meta property="og:description" content="Buy or sell with a local expert. Featured listings, neighborhood guides and free valuations.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80">
-    <script type="application/ld+json">
+<meta property="og:image" content="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80">    <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"RealEstateAgent","name":"Julian Vance","description":"Independent real estate agent and local market expert","areaServed":["Downtown","Suburbs","City Center"]}
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -177,13 +176,13 @@
             <h2>Mortgage Calculator</h2>
             <div class="calc-box">
                 <div class="calc-inputs">
-                    <label>Property Price ($)</label>
+                    <label for="calcPrice">Property Price ($)</label>
                     <input type="number" id="calcPrice" value="850000">
-                    <label>Down Payment (%)</label>
+                    <label for="calcDown">Down Payment (%)</label>
                     <input type="number" id="calcDown" value="20">
-                    <label>Interest Rate (%)</label>
+                    <label for="calcRate">Interest Rate (%)</label>
                     <input type="number" id="calcRate" value="5.5" step="0.1">
-                    <label>Loan Term (Years)</label>
+                    <label for="calcYears">Loan Term (Years)</label>
                     <input type="number" id="calcYears" value="30">
                 </div>
                 <div class="calc-result">
@@ -310,6 +309,7 @@
                         <label for="tl">When do you want to sell?</label>
                         <select id="tl"><option>Within 3 months</option><option>3 to 6 months</option><option>Just curious</option></select>
                     </div>
+                    <label class="consent"><input type="checkbox" id="ok"> I agree to be contacted about this request. <a href="privacy.html">Privacy and cookies</a></label>
                     <button class="btn" type="submit">Send request</button>
                     <p class="note" id="formNote"></p>
                 </form>
@@ -322,10 +322,10 @@
     <div class="container foot">
         <form id="news" novalidate>
             <h3>New listings in your inbox, once a month</h3>
-            <div class="row"><input type="email" id="ne" placeholder="Email"><button class="btn btn-pop">Subscribe</button></div>
+            <div class="row"><input type="email" id="ne" placeholder="Email" aria-label="Email"><button class="btn btn-pop">Subscribe</button></div>
             <p class="note" id="newsNote"></p>
         </form>
-        <p>© 2026 Julian Vance. All rights reserved.</p>
+        <p>© 2026 Julian Vance. Demo project: the listings, reviews and numbers are fictional. <a href="privacy.html">Privacy and cookies</a></p>
     </div>
 </footer>
 
