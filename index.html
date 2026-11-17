@@ -1,355 +1,195 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Julian Vance | Real Estate Agent</title>
-    <meta name="description" content="Independent real estate agent helping you buy, sell and understand your neighborhood. Featured listings, recent sales and free home valuations.">
-    <meta property="og:title" content="Julian Vance | Real Estate Agent">
-    <meta property="og:description" content="Buy or sell with a local expert. Featured listings, neighborhood guides and free valuations.">
-    <meta property="og:type" content="website">
-<meta property="og:image" content="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80">    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"RealEstateAgent","name":"Julian Vance","description":"Independent real estate agent and local market expert","areaServed":["Downtown","Suburbs","City Center"]}
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&family=Young+Serif&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Astra Dental Care | Dentist in Alexandria</title>
+<meta name="description" content="Family dentist in Alexandria. Free first checkup, same-day appointments and prices listed before treatment starts.">
+<meta property="og:title" content="Astra Dental Care | Dentist in Alexandria">
+<meta property="og:description" content="Free first checkup, same-day appointments, prices listed before treatment.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://abdelrahim-e.github.io/Astra-Dental/Images/hero.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dentist","name":"Astra Dental Care","address":{"@type":"PostalAddress","addressLocality":"Alexandria","addressCountry":"EG"},"openingHours":"Sa-Th 10:00-21:00","priceRange":"EGP"}</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231D5E86'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700&family=Figtree:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="progress" id="progress"></div>
-
-<header class="header" id="header">
-    <div class="container bar">
-        <a href="#top" class="logo">Julian Vance</a>
-        <nav class="nav" id="nav">
-            <a href="#listings">Listings</a>
-            <a href="#mortgage">Calculator</a>
-            <a href="#areas">Neighborhoods</a>
-            <a href="#about">About</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#contact" class="btn btn-sm">Get in touch</a>
-            <button class="icon-btn theme-btn" id="themeToggle" aria-label="Toggle Theme">
-                <svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-            </button>
-        </nav>
-        <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span></button>
-    </div>
+<header class="top">
+  <div class="wrap bar">
+    <a href="#" class="logo">Astra Dental</a>
+    <nav id="nav">
+      <a href="#services" data-i18n="n1">Treatments</a>
+      <a href="#results" data-i18n="n2">Results</a>
+      <a href="#team" data-i18n="n3">Dentists</a>
+      <a href="#faq" data-i18n="n4">Questions</a>
+    </nav>
+    <button class="ico" id="langBtn" aria-label="Switch language">ع</button>
+    <button class="ico" id="themeBtn" aria-label="Switch theme">
+      <svg class="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+    <a href="#book" class="btn small" data-i18n="book">Book a visit</a>
+    <button class="ico burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+  </div>
 </header>
 
-<main id="top">
-    <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-text">
-                <h1>Know your street before you buy on it.</h1>
-                <p>Ten years of local sales, school runs and street-by-street knowledge, put to work for first-time buyers and sellers who want a fair price.</p>
-                <div class="actions">
-                    <a href="#listings" class="btn">See listings</a>
-                    <a href="#contact" class="btn btn-ghost">Get a free home valuation</a>
-                </div>
-            </div>
-            
-            <figure class="arch">
-                <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=80">
-                    <source src="hero.mp4" type="video/mp4">
-                </video>
-            </figure>
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1 data-i18n="h1">Smile like you mean it.</h1>
+      <p class="lead" data-i18n="hp">Checkups, whitening, braces and implants for the whole family, all under one roof.</p>
+      <div class="actions"><a href="#book" class="btn" data-i18n="book">Book a visit</a><a href="#services" class="plain" data-i18n="hb2">See prices</a></div>
+    </div>
+    <div class="photo">
+      <img src="Images/hero.jpg" width="1000" height="1200" fetchpriority="high" alt="Bright treatment room at Astra Dental Care">
+      <p class="badge" data-i18n="badge">Same-day appointments, Saturday to Thursday</p>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="sec">
+  <div class="wrap narrow">
+    <h2 data-i18n="s_t">Treatments and starting prices</h2>
+    <p class="lead" data-i18n="s_p">You get the exact number after your checkup, in writing, before any treatment begins.</p>
+    <ul class="svc">
+      <li><div><h3 data-i18n="s1t">Teeth whitening</h3><p data-i18n="s1d">One visit of about an hour. Gentle on enamel.</p></div><span class="price" data-i18n="s1p">from EGP 1,500</span></li>
+      <li><div><h3 data-i18n="s2t">Braces and aligners</h3><p data-i18n="s2d">Clear aligners or metal braces, planned with you.</p></div><span class="price" data-i18n="s2p">from EGP 15,000</span></li>
+      <li><div><h3 data-i18n="s3t">Dental implants</h3><p data-i18n="s3d">A natural-looking replacement for a missing tooth.</p></div><span class="price" data-i18n="s3p">from EGP 12,000 per tooth</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="results" class="sec tint">
+  <div class="wrap narrow">
+    <h2 data-i18n="r_t">What a smile makeover looks like</h2>
+    <p class="lead" data-i18n="r_p">Drag the handle, or use the arrow keys.</p>
+    <div class="ba">
+      <img src="after.jpg" alt="Patient's smile after treatment">
+      <img src="before.jpg" alt="Patient's smile before treatment" id="beforeImg">
+      <span class="tag l" data-i18n="bef">Before</span><span class="tag r" data-i18n="aft">After</span>
+      <div class="line" id="baLine"></div>
+      <input type="range" min="0" max="100" value="50" id="baRange" aria-label="Compare before and after">
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap split">
+    <h2 data-i18n="fv_t">Your first visit</h2>
+    <div class="steps">
+      <p><b data-i18n="fv1b">We talk before anything else.</b><span data-i18n="fv1">Tell us what bothers you and what worries you. Ten minutes, no chair yet.</span></p>
+      <p><b data-i18n="fv2b">Then a gentle checkup.</b><span data-i18n="fv2">X-rays only if we need them. Nothing starts without your yes.</span></p>
+      <p><b data-i18n="fv3b">You leave with a plan.</b><span data-i18n="fv3">Written down, with prices. Decide at home, there is no rush.</span></p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="sec tint">
+  <div class="wrap">
+    <h2 data-i18n="g_t">Inside the clinic</h2>
+    <div class="gal">
+      <img src="Images/gallery-1.jpg" width="900" height="600" alt="Dentist examining a patient's teeth" loading="lazy">
+      <img src="Images/gallery-2.jpg" width="600" height="400" alt="Treatment chair with an X-ray screen" loading="lazy">
+      <img src="Images/gallery-3.jpg" width="600" height="400" alt="Dentist reviewing X-rays on a light box" loading="lazy">
+      <img src="Images/gallery-4.jpg" width="600" height="400" alt="Dental instruments and equipment beside the treatment chair" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="team" class="sec">
+  <div class="wrap">
+    <h2 data-i18n="t_t">Your dentists</h2>
+    <div class="team">
+      <figure><img src="Images/sarah.jpg" width="500" height="625" alt="Dr. Sarah Ahmed" loading="lazy"><figcaption><b data-i18n="d1">Dr. Sarah Ahmed</b><span data-i18n="d1r">Cosmetic dentistry</span></figcaption></figure>
+      <figure><img src="Images/omar.jpg" width="500" height="625" alt="Dr. Omar Hassan" loading="lazy"><figcaption><b data-i18n="d2">Dr. Omar Hassan</b><span data-i18n="d2r">Orthodontics</span></figcaption></figure>
+      <figure><img src="Images/layla.jpg" width="500" height="625" alt="Dr. Layla Mostafa" loading="lazy"><figcaption><b data-i18n="d3">Dr. Layla Mostafa</b><span data-i18n="d3r">Children's dentistry</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec tint">
+  <div class="wrap">
+    <h2 data-i18n="v_t">What patients say</h2>
+    <div class="quotes">
+      <blockquote><p data-i18n="v1">"I have avoided dentists for years. Dr. Sarah explained every step and I felt nothing."</p><cite data-i18n="v1n">Mona A., whitening</cite></blockquote>
+      <blockquote><p data-i18n="v2">"The price on my plan was the price I paid. No extra lines on the bill."</p><cite data-i18n="v2n">Karim H., implant</cite></blockquote>
+      <blockquote><p data-i18n="v3">"I booked in the morning and was in the chair that afternoon."</p><cite data-i18n="v3n">Nour S., checkup</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="sec">
+  <div class="wrap narrow">
+    <h2 data-i18n="f_t">Before you book</h2>
+    <details><summary data-i18n="q1">Will it hurt?</summary><p data-i18n="a1">We use local anesthesia and go at your pace. Tell us to stop and we stop.</p></details>
+    <details><summary data-i18n="q2">What does the first checkup cost?</summary><p data-i18n="a2">Nothing. The first checkup and consultation are free for new patients.</p></details>
+    <details><summary data-i18n="q3">Do you accept insurance?</summary><p data-i18n="a3">Most major providers, yes. Call us with your plan and we will check it before your visit.</p></details>
+  </div>
+</section>
+
+<section id="book" class="sec tint">
+  <div class="wrap split">
+    <div>
+      <h2 data-i18n="c_t">Pick a day and a time</h2>
+      <p class="lead" data-i18n="c_p">We confirm by phone within one hour.</p>
+    </div>
+    <form id="form" novalidate>
+      <label for="nm" data-i18n="l1">Full name</label><input id="nm" autocomplete="name">
+      <label for="ph" data-i18n="l2">Phone</label><input id="ph" type="tel" autocomplete="tel">
+      <label for="sv" data-i18n="l3">Treatment</label>
+      <select id="sv"><option data-i18n="s0">Checkup (free)</option><option data-i18n="s1t">Teeth whitening</option><option data-i18n="s2t">Braces and aligners</option><option data-i18n="s3t">Dental implants</option></select>
+      <label for="dt" data-i18n="l4">Day</label><input id="dt" type="date">
+      <fieldset><legend data-i18n="l5">Time</legend>
+        <div class="slots">
+          <label><input type="radio" name="slot" value="10:00"><span>10:00</span></label>
+          <label><input type="radio" name="slot" value="12:00"><span>12:00</span></label>
+          <label><input type="radio" name="slot" value="14:00"><span>14:00</span></label>
+          <label><input type="radio" name="slot" value="17:00"><span>17:00</span></label>
+          <label><input type="radio" name="slot" value="19:00"><span>19:00</span></label>
         </div>
-    </section>
-
-    <section class="stats">
-        <div class="container stat-row">
-            <div><b data-count="10" data-suffix="+">0</b><span>years in the market</span></div>
-            <div><b data-count="150" data-suffix="">0</b><span>homes sold</span></div>
-            <div><b data-count="50" data-prefix="$" data-suffix="M">0</b><span>in total sales</span></div>
-            <div><b data-count="98" data-suffix="%">0</b><span>of asking price</span></div>
-        </div>
-    </section>
-
-    <section id="listings" class="sec fade-up">
-        <div class="container">
-            <h2>Homes for sale and recently sold</h2>
-            <div class="filters">
-                <div class="tabs">
-                    <button class="chip on" data-f="all">All</button>
-                    <button class="chip" data-f="sale">For sale</button>
-                    <button class="chip" data-f="sold">Sold</button>
-                </div>
-                <select id="hoodFilter">
-                    <option value="all">All neighborhoods</option>
-                    <option value="down">Downtown</option>
-                    <option value="sub">Suburbs</option>
-                    <option value="cen">City Center</option>
-                </select>
-            </div>
-            <div class="grid" id="grid">
-                <!-- Property 1 -->
-                <article class="card open-modal" data-status="sale" data-hood="down"
-                    data-img="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80" 
-                    data-img1="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80" 
-                    data-img2="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" 
-                    data-price="$850,000" data-loc="123 Maple Ave, Downtown" data-feat="3 beds • 2 baths • 2,500 sq ft">
-                    <div class="ph"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="White modern villa with pool in Downtown" loading="lazy" width="600" height="450"><span class="tag">For sale</span></div>
-                    <div class="info">
-                        <h3>$850,000</h3><p>123 Maple Ave, Downtown</p>
-                        <p class="feat"><span>3 beds</span><span>2 baths</span><span>2,500 sq ft</span></p>
-                        <button class="link">View Details</button>
-                    </div>
-                </article>
-
-                <!-- Property 2 -->
-                <article class="card open-modal" data-status="sale" data-hood="sub"
-                    data-img="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80" 
-                    data-img1="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&q=80" 
-                    data-img2="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80" 
-                    data-price="$1,200,000" data-loc="456 Oak Lane, Suburbs" data-feat="4 beds • 3 baths • 3,200 sq ft">
-                    <div class="ph"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Dark wood modern house in the Suburbs" loading="lazy" width="600" height="450"><span class="tag">For sale</span></div>
-                    <div class="info">
-                        <h3>$1,200,000</h3><p>456 Oak Lane, Suburbs</p>
-                        <p class="feat"><span>4 beds</span><span>3 baths</span><span>3,200 sq ft</span></p>
-                        <button class="link">View Details</button>
-                    </div>
-                </article>
-
-                <!-- Property 3 -->
-                <article class="card open-modal" data-status="sale" data-hood="cen"
-                    data-img="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80" 
-                    data-img1="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&q=80" 
-                    data-img2="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&q=80" 
-                    data-price="$720,000" data-loc="789 Pine St, City Center" data-feat="2 beds • 1 bath • 1,100 sq ft">
-                    <div class="ph"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Modern glass house in City Center" loading="lazy" width="600" height="450"><span class="tag">For sale</span></div>
-                    <div class="info">
-                        <h3>$720,000</h3><p>789 Pine St, City Center</p>
-                        <p class="feat"><span>2 beds</span><span>1 bath</span><span>1,100 sq ft</span></p>
-                        <button class="link">View Details</button>
-                    </div>
-                </article>
-
-                <!-- Property 4 -->
-                <article class="card open-modal" data-status="sold" data-hood="sub"
-                    data-img="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&q=80" 
-                    data-img1="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=600&q=80" 
-                    data-img2="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80" 
-                    data-price="$940,000" data-loc="12 Cedar Court, Suburbs" data-feat="4 beds • 3 baths • Sold over asking">
-                    <div class="ph"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80" alt="Brick family home in the Suburbs" loading="lazy" width="600" height="450"><span class="tag sold">Sold</span></div>
-                    <div class="info">
-                        <h3>$940,000</h3><p>12 Cedar Court, Suburbs</p>
-                        <p class="feat"><span>4 beds</span><span>3 baths</span><span>Sold over asking</span></p>
-                        <button class="link">View Details</button>
-                    </div>
-                </article>
-
-                <!-- Property 5 (Updated to Luxury) -->
-                <article class="card open-modal" data-status="sold" data-hood="down"
-                    data-img="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80" 
-                    data-img1="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80" 
-                    data-img2="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" 
-                    data-price="$650,000" data-loc="55 Elm St, Downtown" data-feat="2 beds • 2 baths • Sold in 9 days">
-                    <div class="ph"><img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80" alt="Luxury villa in Downtown" loading="lazy" width="600" height="450"><span class="tag sold">Sold</span></div>
-                    <div class="info">
-                        <h3>$650,000</h3><p>55 Elm St, Downtown</p>
-                        <p class="feat"><span>2 beds</span><span>2 baths</span><span>Sold in 9 days</span></p>
-                        <button class="link">View Details</button>
-                    </div>
-                </article>
-
-                <!-- Property 6 -->
-                <article class="card open-modal" data-status="sold" data-hood="cen"
-                    data-img="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=1200&q=80" 
-                    data-img1="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80" 
-                    data-img2="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=80" 
-                    data-price="$1,100,000" data-loc="200 Park Ave, City Center" data-feat="3 beds • 2 baths • Sold over asking">
-                    <div class="ph"><img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=600&q=80" alt="Luxury condo in City Center" loading="lazy" width="600" height="450"><span class="tag sold">Sold</span></div>
-                    <div class="info">
-                        <h3>$1,100,000</h3><p>200 Park Ave, City Center</p>
-                        <p class="feat"><span>3 beds</span><span>2 baths</span><span>Sold over asking</span></p>
-                        <button class="link">View Details</button>
-                    </div>
-                </article>
-            </div>
-            <p class="empty-state" id="emptyState">No homes match these filters. Try another neighborhood.</p>
-        </div>
-    </section>
-
-    <section id="mortgage" class="sec alt">
-        <div class="container">
-            <h2>Mortgage Calculator</h2>
-            <div class="calc-box">
-                <div class="calc-inputs">
-                    <label for="calcPrice">Property Price ($)</label>
-                    <input type="number" id="calcPrice" value="850000">
-                    <label for="calcDown">Down Payment (%)</label>
-                    <input type="number" id="calcDown" value="20">
-                    <label for="calcRate">Interest Rate (%)</label>
-                    <input type="number" id="calcRate" value="5.5" step="0.1">
-                    <label for="calcYears">Loan Term (Years)</label>
-                    <input type="number" id="calcYears" value="30">
-                </div>
-                <div class="calc-result">
-                    <p>Estimated Monthly Payment</p>
-                    <h3 id="calcMonthly">$0</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="areas" class="sec fade-up">
-        <div class="container">
-            <h2>Neighborhood guides</h2>
-            <div class="grid3">
-                <details class="area-card">
-                    <summary class="area-header">
-                        <h3>Downtown</h3>
-                        <span class="area-toggle">+</span>
-                    </summary>
-                    <div class="area-content">
-                        <p>Walk to cafes, offices and the tram. Best for people who want no car.</p>
-                        <div class="area-stats">
-                            <dl><dt>Average price</dt><dd>$820,000</dd><dt>Schools</dt><dd>8/10</dd><dt>Transit</dt><dd>Excellent</dd></dl>
-                        </div>
-                    </div>
-                </details>
-                
-                <details class="area-card">
-                    <summary class="area-header">
-                        <h3>Suburbs</h3>
-                        <span class="area-toggle">+</span>
-                    </summary>
-                    <div class="area-content">
-                        <p>Larger homes, quiet streets and parks. Best for growing families.</p>
-                        <div class="area-stats">
-                            <dl><dt>Average price</dt><dd>$1,050,000</dd><dt>Schools</dt><dd>9/10</dd><dt>Transit</dt><dd>Good</dd></dl>
-                        </div>
-                    </div>
-                </details>
-                
-                <details class="area-card">
-                    <summary class="area-header">
-                        <h3>City Center</h3>
-                        <span class="area-toggle">+</span>
-                    </summary>
-                    <div class="area-content">
-                        <p>Apartments close to everything. Best for first-time buyers and investors.</p>
-                        <div class="area-stats">
-                            <dl><dt>Average price</dt><dd>$640,000</dd><dt>Schools</dt><dd>7/10</dd><dt>Transit</dt><dd>Excellent</dd></dl>
-                        </div>
-                    </div>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="sec alt fade-up">
-        <div class="container split">
-            <img class="about-img" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=800&q=80" alt="Julian Vance" loading="lazy">
-            <div>
-                <h2>I grew up here, and I sell here.</h2>
-                <p class="lead">I started in real estate after helping my own family buy their first home. Since then I have helped over 150 households buy, sell and invest, and I answer my own phone.</p>
-                <ul class="creds">
-                    <li>Top 1% of agents in the region</li>
-                    <li>Licensed and certified buyer's agent</li>
-                    <li>5-Star Client Satisfaction</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="faq" class="sec">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <button class="faq-q" aria-expanded="false">How long does the buying process take?</button>
-                    <div class="faq-a"><p>Typically 30-45 days from offer to closing.</p></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q" aria-expanded="false">Do I need a pre-approval?</button>
-                    <div class="faq-a"><p>Yes, it strengthens your offer significantly.</p></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q" aria-expanded="false">What are the closing costs?</button>
-                    <div class="faq-a"><p>Usually 2-5% of the purchase price, covering taxes, title fees and lender costs.</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="reviews" class="sec alt">
-        <div class="container">
-            <h2>What clients say</h2>
-            <div class="grid2">
-                <blockquote><p>"We found our home in under a month. He answered every question, even at 10 pm."</p><cite>John D. <span>Bought a home</span></cite></blockquote>
-                <blockquote><p>"Sold above asking in two weeks. The photos and the pricing advice made the difference."</p><cite>Sarah M. <span>Sold a home</span></cite></blockquote>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="sec">
-        <div class="container split">
-            <div>
-                <h2>Tell me what you need.</h2>
-                <p class="lead">Choose buying or selling. I reply within one working day.</p>
-            </div>
-            <div class="formbox">
-                <div class="tabs">
-                    <button class="chip on" data-tab="buy">I'm buying</button>
-                    <button class="chip" data-tab="sell">I'm selling</button>
-                </div>
-                <form id="leadForm" novalidate>
-                    <label for="n">Full name</label><input id="n" required>
-                    <label for="e">Email</label><input id="e" type="email" required>
-                    <div data-pane="buy">
-                        <label for="b">Budget</label>
-                        <select id="b"><option>$500k-$800k</option><option>$800k-$1.2M</option><option>$1.2M+</option></select>
-                        <label for="bd">Bedrooms</label>
-                        <select id="bd"><option>1-2</option><option>3</option><option>4+</option></select>
-                    </div>
-                    <div data-pane="sell" hidden>
-                        <label for="ad">Property address</label><input id="ad">
-                        <label for="tl">When do you want to sell?</label>
-                        <select id="tl"><option>Within 3 months</option><option>3 to 6 months</option><option>Just curious</option></select>
-                    </div>
-                    <label class="consent"><input type="checkbox" id="ok"> I agree to be contacted about this request. <a href="privacy.html">Privacy and cookies</a></label>
-                    <button class="btn" type="submit">Send request</button>
-                    <p class="note" id="formNote"></p>
-                </form>
-            </div>
-        </div>
-    </section>
+      </fieldset>
+      <label class="consent"><input type="checkbox" id="ok"><span data-i18n="consent">I agree to be contacted about this request. <a href="privacy.html">Privacy and cookies</a></span></label>
+      <p class="msg" id="msg" role="status"></p>
+      <button class="btn" type="submit" data-i18n="send">Request appointment</button>
+    </form>
+  </div>
+</section>
+<section id="visit" class="sec">
+  <div class="wrap split">
+    <div>
+      <h2 data-i18n="vi_t">Visit us</h2>
+      <p class="open" id="openNow" role="status"><span class="dot"></span><span id="openTxt"></span></p>
+      <dl class="hours">
+        <dt data-i18n="hr1">Saturday to Thursday</dt><dd dir="ltr">10:00 - 21:00</dd>
+        <dt data-i18n="hr2">Friday</dt><dd data-i18n="closed">Closed</dd>
+      </dl>
+      <a href="tel:+201000000000" class="btn" data-i18n="callb">Call the clinic</a>
+    </div>
+    <div class="map" id="mapBox"><button class="btn" id="mapBtn" data-i18n="mapbtn">Show map</button></div>
+  </div>
+</section>
 </main>
 
-<footer class="footer">
-    <div class="container foot">
-        <form id="news" novalidate>
-            <h3>New listings in your inbox, once a month</h3>
-            <div class="row"><input type="email" id="ne" placeholder="Email" aria-label="Email"><button class="btn btn-pop">Subscribe</button></div>
-            <p class="note" id="newsNote"></p>
-        </form>
-        <p>© 2026 Julian Vance. Demo project: the listings, reviews and numbers are fictional. <a href="privacy.html">Privacy and cookies</a></p>
-    </div>
+<footer class="foot">
+  <div class="wrap fgrid">
+    <div><a href="#" class="logo">Astra Dental</a><p data-i18n="fd">Family dental care in Alexandria.</p></div>
+    <div><b data-i18n="fa">Visit</b><p data-i18n="fad">Alexandria, Egypt</p><p data-i18n="fh">Saturday to Thursday, 10 am to 9 pm</p></div>
+    <div><b data-i18n="fc">Contact</b><p dir="ltr">+20 100 000 0000</p><p>hello@astradental.example</p></div>
+  </div>
+  <div class="wrap credit">
+    <a href="privacy.html" data-i18n="privlink">Privacy and cookies</a>
+    <p data-i18n="rights">© 2026 Astra Dental Care. Demo project, not a real clinic.</p>
+    <a href="https://wa.me/201210963651?text=Hi%2C%20I%20saw%20your%20Astra%20Dental%20demo%20and%20would%20like%20a%20website%20for%20my%20business." target="_blank" rel="noopener" data-i18n="cr">Want a site like this? Message the developer</a>
+  </div>
 </footer>
-
-<dialog id="propModal" class="modal">
-    <div class="modal-content">
-        <button class="close-modal" id="closeModal" aria-label="Close modal">&times;</button>
-        <div class="modal-gallery">
-            <img id="modalImg" src="" alt="Property">
-            <div class="modal-thumbs">
-                <img id="modalThumb1" src="" alt="Interior">
-                <img id="modalThumb2" src="" alt="Room">
-            </div>
-        </div>
-        <div class="modal-info">
-            <h3 id="modalPrice"></h3>
-            <p id="modalLoc"></p>
-            <p id="modalFeat"></p>
-            <a href="#contact" class="btn" id="modalTourBtn">Schedule a tour</a>
-        </div>
-    </div>
-</dialog>
-
-<a href="#contact" class="sticky-cta">Schedule a Consultation</a>
-
+<div class="mbar">
+  <a href="tel:+201000000000" data-i18n="call">Call</a>
+  <a href="https://wa.me/201000000000" target="_blank" rel="noopener" data-i18n="wa">WhatsApp</a>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
