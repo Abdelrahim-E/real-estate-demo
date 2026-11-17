@@ -12,9 +12,12 @@
     {"@context":"https://schema.org","@type":"RealEstateAgent","name":"Julian Vance","description":"Independent real estate agent and local market expert","areaServed":["Downtown","Suburbs","City Center"]}
     </script>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230E3B34'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23C8F169' font-family='Georgia,serif' font-weight='700'%3EJ%3C/text%3E%3C/svg%3E">
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=80" fetchpriority="high">
+<link rel="preconnect" href="https://images.unsplash.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&family=Young+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&family=Young+Serif&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&family=Young+Serif&display=swap"></noscript>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -76,7 +79,7 @@
                     <button class="chip" data-f="sale">For sale</button>
                     <button class="chip" data-f="sold">Sold</button>
                 </div>
-                <select id="hoodFilter">
+                <select id="hoodFilter" aria-label="Neighborhood">
                     <option value="all">All neighborhoods</option>
                     <option value="down">Downtown</option>
                     <option value="sub">Suburbs</option>
